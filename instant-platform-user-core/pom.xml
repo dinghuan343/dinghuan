@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.oppo.cdo.instant.platform.user</groupId>
+		<artifactId>instant-platform-user</artifactId>
+		<version>intl.1.0.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>instant-platform-user-core</artifactId>
+	<properties>
+		<project.platform.verion>intl.1.0.0-SNAPSHOT</project.platform.verion>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.user</groupId>
+			<artifactId>instant-platform-user-domain</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.user</groupId>
+			<artifactId>instant-platform-user-dal</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.user</groupId>
+			<artifactId>instant-platform-user-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.idgenerator</groupId>
+			<artifactId>instant-platform-idgenerator-facade</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.im</groupId>
+			<artifactId>instant-platform-im-facade</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.common</groupId>
+			<artifactId>instant-platform-common-base</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.common</groupId>
+			<artifactId>instant-platform-common-cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.oppo.cdo.instant.platform.common</groupId>
+			<artifactId>instant-platform-common-sensitive</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-oauth2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-content</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-jackson2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client-jetty</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client-servlet</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.auth</groupId>
+			<artifactId>google-auth-library-oauth2-http</artifactId>
+		</dependency>
+
+
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>mapstruct</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<source>1.8</source> <!-- or higher, depending on your project -->
+							<target>1.8</target> <!-- or higher, depending on your project -->
+							<annotationProcessorPaths>
+								<path>
+									<groupId>org.mapstruct</groupId>
+									<artifactId>mapstruct-processor</artifactId>
+									<version>1.2.0.Final</version>
+								</path>
+							</annotationProcessorPaths>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
